@@ -14,11 +14,21 @@ LINUX COMMANDS:
 
 -Create new user: sudo adduser new_username
 
--Assign password: sudo vim /etc/pam.d/common-password
+-Assign password: 
+(sudo vim /etc/pam.d/common-password)
 Find: password      requisite       pam_pwquality.so retry=3
 Change to: password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 clearreject_username difok=7 enforce_for_root
 
+(sudo vim /etc/login.defs)
+Find: PASS_MAX_DAYS 9999 PASS_MIN_DAYS 0 PASS_WARN_AGE 7
+Change to: PASS_MAX_DAYS 30 PASS_MIN_DAYS 0 PASS_WARN_AGE 7
+(sudo reboot)
 
+-Create "Evaluating" Group: (sudo groupadd evaluating) (sudo usermod -aG evaluating your_new_username)
+
+-Check new user belongs to "evaluating": (getent group evaluating)
+
+-Change Password Policy for New User: (sudo apt-get install libpam-pwqu) (sudo vim /etc/pam.d/common-password)
 
 EVALUATION CHECKLIST:
 
