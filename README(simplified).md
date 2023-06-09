@@ -29,6 +29,8 @@ Change to: PASS_MAX_DAYS 30 PASS_MIN_DAYS 0 PASS_WARN_AGE 7
 -Check new user belongs to "evaluating": (getent group evaluating)
 
 -Change Password Policy for New User: (sudo apt-get install libpam-pwqu) (sudo vim /etc/pam.d/common-password)
+Find: password        requisite       pam_deny.so
+Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=10 ucredit=-1  maxrepeat=3 reject_username difok=7 enforce_for_root
 
 
 EVALUATION CHECKLIST:
