@@ -30,6 +30,7 @@ Change to: PASS_MAX_DAYS 30 PASS_MIN_DAYS 0 PASS_WARN_AGE 7
 
 -Change Password Policy for New User: (sudo apt-get install libpam-pwqu) (sudo vim /etc/pam.d/common-password)
 
+
 EVALUATION CHECKLIST:
 
 -A VM is a computer inside a computer
