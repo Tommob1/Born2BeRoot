@@ -1,3 +1,27 @@
+LINUX COMMANDS:
+
+-Check Password Policy: sudo chage -l username
+
+-Check UFW is started: sudo ufw status
+
+-Check SSH is started: sudo systemctl status ssh
+
+-Check chosen OS: lsb_release -a || cat /etc/os-release
+
+-Check sudo group: getent group sudo
+
+-Check user42 group: getent group user42
+
+-Create new user: sudo adduser new_username
+
+-Assign password: sudo vim /etc/pam.d/common-password
+Find: password      requisite       pam_pwquality.so retry=3
+Change to: password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 clearreject_username difok=7 enforce_for_root
+
+
+
+EVALUATION CHECKLIST:
+
 -A VM is a computer inside a computer
 
 -Debian: Commutinity driven development with a wide variety of use cases (servers, desktop OS etc.)
