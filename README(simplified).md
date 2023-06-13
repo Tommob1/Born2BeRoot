@@ -64,6 +64,15 @@ Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=1
 
 -Login as new user, then login using: (ssh new_user@127.0.0.1 -p 4242)
 
+-Check you cannot user SSH with teh "root" user: (ssh btomlins42@127.0.0.1 -p 4242
+
+-See monitoring.sh script: (sudo su-) (cd /usr/local/bin && vim monitoring.sh) (chmod +x monitoring.sh) (./monitoring.sh)
+
+-Make sure monitoring.sh runs with dynamic values: (sudo crontab -u root -e) Change 10 value to 1
+
+-Stop and start script: (sudo cronstop) (sudo cronstart)
+
+-Check script still exists in the same place upon restart: (sudo reboot) (sudo crontab -u root -e)
 
 EVALUATION CHECKLIST:
 
