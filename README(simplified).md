@@ -34,6 +34,13 @@ Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=1
 
 -Check machine hostname is correctly formatted as btomlins42: (hostnamectl)
 
+-Modify hostname by replacing with new login: (sudo hostnamectl set-hostname new_hostname
+sudo reboot)
+
+-View VM partitioning: (lsblk)
+
+-Check sudo installation: (dpkg -l | grep sudo)
+
 -
 
 
