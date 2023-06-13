@@ -48,6 +48,18 @@ Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=1
 
 -Verify /var/log/sudo exists: (cd /var/log/sudo) (cat sudo.log)
 
+-Run a command via sudo and cheack if log has updated: (sudo echo "hello world") (cat sudo.log)
+
+-Check UFW is installed properly: (sudo ufw status numbered)
+
+-List active UFW rules, rule must exist for port 4242: (sudo ufw status numbered)
+
+-Add rule to open port 8080: (sudo ufw allow 8080)
+
+-Delete new rule: (sudo ufw delete 4) (sudo ufw delete 2)
+
+-
+
 
 EVALUATION CHECKLIST:
 
