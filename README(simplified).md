@@ -58,7 +58,11 @@ Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=1
 
 -Delete new rule: (sudo ufw delete 4) (sudo ufw delete 2)
 
--
+-Check SSH service is installed and working: (sudo service ssh status)
+
+-Verify SSH service only uses port 4242: (sudo nano /etc/ssh/sshd_config)
+
+-Login as new user, then login using: (ssh new_user@127.0.0.1 -p 4242)
 
 
 EVALUATION CHECKLIST:
