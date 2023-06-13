@@ -74,6 +74,7 @@ Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=1
 
 -Check script still exists in the same place upon restart: (sudo reboot) (sudo crontab -u root -e)
 
+
 EVALUATION CHECKLIST:
 
 -A VM is a computer inside a computer
