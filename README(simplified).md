@@ -32,6 +32,10 @@ Change to: PASS_MAX_DAYS 30 PASS_MIN_DAYS 0 PASS_WARN_AGE 7
 Find: password        requisite       pam_deny.so
 Replace With: password        requisite       pam_pwquality.so  retry=3 minlen=10 ucredit=-1  maxrepeat=3 reject_username difok=7 enforce_for_root
 
+-Check machine hostname is correctly formatted as btomlins42: (hostnamectl)
+
+-
+
 
 EVALUATION CHECKLIST:
 
